@@ -1,0 +1,831 @@
+* {
+	padding: 0;
+	margin: 0;
+  box-sizing: border-box;
+}
+/** form error message **/
+.error {
+  color: #FF0000;
+}
+#nameError {
+  display: none;
+  font-size: 0.8em;
+}
+
+#nameError.visible {
+  display: block;
+}
+
+input.invalid {
+  border-color: red;
+}
+
+/**start of the navigation bar styles **/
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 10px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 70px;
+  background-color: rgba(0,0,0,.8);
+}
+/** styling the navigation logo vehicle registration**/
+nav .logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	color: white;
+}
+nav .logo span{
+    color:#a52a2a;
+}
+/** styling the navigation Links**/
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+nav .links a {
+	display: block;
+	padding: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+/** styling the checkbox toogler display none**/
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+/** styling the division holding the lines, bars **/
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+/** styling the navigation responsiveness bars **/
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+/** INDEX PAGE STYLES **/
+.mainpage{
+  clear:both;
+    position: relative;
+    margin-top: 82px;
+    width:100%;
+    clear: both; 
+}
+/** with the image as the background**/
+#banner{
+    background:linear-gradient(rgba(0,0,0,0.5),#697977), url(../assets/three.jpg);
+    background-size:cover;
+    background-position: center;
+    height:500px;
+}
+/** Text on top of the image **/
+.banner-text{
+    text-align: center;
+    color:white;
+    padding-top: 200px;
+}
+.banner-text h3{
+font-size: 50px;
+}
+.banner-text p{
+    font-size: 20px;
+    font-style: italic;
+}
+/** button on top of the imag **/
+.banner-btn{
+   margin:70px auto 0; 
+}
+/** styling the link on the button **/
+.banner-btn a{
+    width:150px;
+    text-decoration: none;
+    display: inline-block;
+    margin:0 10px;
+    padding:12px 0;
+    color:white;
+    border: .5px solid white;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+.banner-btn a span{
+    width:40%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background:white;
+    z-index: -1; 
+    transition: 0.5s;
+}
+.banner-btn a:hover span{
+    width:100%;
+}
+.banner-btn a:hover{
+    color:#000;
+}
+/**OUR PARTNERS**/
+.partner {
+    color:#010d29;
+    width:100%;
+    background-color: white;
+  }
+  
+  .heading {
+    font-size: 30px;
+    text-align:center;
+    color: #010d29;
+  }
+/** style to display the profiles in column with a specific width and space between them **/
+  .profiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 80px;
+  }
+  .profile {
+    flex-basis: 260px;
+  }
+  /** make the image circular with a given height and width**/
+  .profile .profile-img {
+    height: 100px;
+    width: 100px;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 400ms;
+  } 
+  .profile:hover .profile-img {
+    filter: grayscale(0);
+  }
+  .user-name {
+    margin-top: 30px;
+    font-size: 25px;
+  }
+  .profile h5 {
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: grey;
+  }
+  /** profile page responsiveness **/
+  /** full width styles **/
+  @media only screen and (max-width: 1150px) {
+    /** display the profiles in column **/
+    .profiles {
+      flex-direction: column;
+    }
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile p {
+      text-align: center;
+      margin: 20px 60px 80px 60px;
+      font-size: 20px;
+    }
+  }
+  /** for smaller screen size **/
+  @media only screen and (max-width: 900px) {
+    .heading {
+      font-size: 40px;
+      color: white;
+      text-align: center;
+    }
+  
+    .heading span {
+      font-size: 15px;
+    }
+  
+    .profiles {
+      margin: 20px 0;
+    }
+  
+    .profile p {
+      margin: 20px 10px 80px 10px;
+    }
+  }
+  
+  /**SERVICES**/
+  .mainservice{
+    margin-top:90px;
+    background:linear-gradient(rgba(0,0,0,0.5),#697977), url(../assets/three.jpg);
+    background-size:cover;
+    background-position: center;
+    height:400px;
+}
+.service_text{
+    text-align: center;
+    color:white;
+    padding-top: 200px;
+}
+.service_text h3{
+font-size: 50px;
+}
+.service_text p{
+  font-size: 20px;
+  font-style: italic;
+}
+.services {
+  margin-top: 30px;
+  color:#010d29;
+  width:100%;
+  background-color: white;
+}
+
+.services .heading {
+  font-size: 30px;
+  text-align:center;
+  color: #010d29;
+}
+.services .heading span {
+  color: #a52a2a;
+}
+.services .profile {
+  flex-basis: 260px;
+}
+/** set height and width for the images**/
+.services .profile .profile-img {
+  height: 150px;
+  width: 150px;
+  margin-left:50px;
+  cursor: pointer;
+  transition: 400ms;
+}
+/** ABOUT US**/
+.about{
+  width:100%;
+  height:550px;
+  background-color: #ddd;
+}
+.aboutcontainer{
+  width:80%;
+  display:block;
+  margin:auto;
+  padding-top:100px;
+}
+.aboutcontent{
+  float:left;
+  width:55%;
+}
+.aboutcontent .abouthead{
+  text-transform: uppercase;
+  font-size: 28px;
+}
+.aboutcontent .acontent h2{
+  margin-top: 14px;
+  color:#5d5d5d;
+}
+.aboutcontent .acontent p{
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 17px;
+  line-height: 40px;
+}
+.absocial{
+  margin-top: 20px;
+}
+/** icons on the about us section **/
+.absocial i{
+  color:#a52a2a;
+  font-size: 30px;
+  padding:0px 10px;
+}
+/** about us image **/
+.aboutimage{
+  float:right;
+  width:40%;
+}
+.aboutimage img{
+  width:100%;
+  height:350px;
+}
+/** FOOTER STYLES **/
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+/** display the columns horizontally with equal width**/
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+    clear: both;
+	background-color: #24262b;
+    padding: 70px 0;
+    line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+/** width for each column to occupy 25%**/
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+/** footer heading design **/
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+/** footer heading design after, to create an horizontal line after each heading**/
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #a52a2a;
+	height: 2px;
+	box-sizing: border-box;
+	width: 70px;
+}
+/** apply margin bottom for all the list element, the last element on the list should not have this margin  property**/
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+/** styles for the footer links **/
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+
+/** hovering effect on the footer links**/
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+/** copyright footer section **/
+.footer2{
+  clear:both;
+  margin-bottom: 20px;
+  background-color: #24262b;
+}
+.footer2 h4{
+  line-height: 40px;
+  color:white;
+}
+/** LOGIN FORM**/
+.login_page{
+    position: relative;
+    margin-top: 100px;
+    width:100%;
+    clear: both;
+}
+/**login form **/
+.loginform{
+    width:500px;
+    margin:auto;
+    height:550px;
+    background:white;
+    color:#010d29;
+}
+.loginform h3{
+    font-size: 25px;
+    text-align: center;
+    line-height: 80px;
+    font-weight: 600;
+}
+.loginform h3 span{
+    color:#a52a2a;
+}
+.loginform p{
+    font-size:20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.loginform form{
+    width: 90%;
+    margin: auto;
+}
+/** login form labels**/
+.loginform form label{
+    font-size:18px;
+    
+}
+/* Full-width inputs */
+ input[type=text], input[type=password],[type=email],[type=file],[type=date],[type=tel],[type=number],[type=checkbox]  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #24262b;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+  }
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+.loginalert{
+  color:red;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+ /** SIGNUP PAGE STYLES */
+ .signuppage{
+    position: relative;
+    margin-top: 100px;
+    width:100%;
+    clear: both;
+ }
+ .signupform{
+    width:700px;
+    height:auto;
+    background:white;
+    color:#010d29;
+    margin: auto;
+  }
+  .signupform h3{
+    font-size: 25px;
+    text-align: center;
+    line-height: 80px;
+    font-weight: 600;
+}
+.signupform h3 span{
+    color:#a52a2a;
+}
+.signupform p{
+    font-size:20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+  .signupform form{
+    width: 90%;
+    margin: auto;
+  }
+  /** form labels**/
+  .loginform form label{
+    font-size:18px;
+  }
+  /**full width form input **/
+  .sfloater{
+    width:100%;
+  }
+/** form input that float to the left**/
+  .sleft{
+    float:left;
+    width:45%;
+  }
+  /** form input that float to the right **/
+  .sright{
+    float:right;
+    width:45%;
+  }
+  
+/** CONTACT US STYLES **/
+.contactus{
+    position: relative;
+    margin-top: 100px;
+    width:100%;
+    clear: both;
+}
+.conimage{
+    background: url('../assets/con2.jpg');
+    height:400px;
+    width:100%;
+  }
+  .conimage h3{
+  font-size: 30px;
+  top:13%;
+  position: absolute;
+  left:40%;
+  color:white;
+  }
+  .secondcon{
+    width:900px;
+    margin: -150px auto 20px;
+    height:750px;
+    background-color: whitesmoke;
+  }
+/** CONTACT INFORMATION STYLES**/
+.contactpage{
+    position: relative;
+    margin-top: 100px;
+    width:100%;
+    clear: both;
+}
+.contactcontainer{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.contactcontainer .contactinformation{
+    width:50%;
+    margin-top: -200px;
+    float:left;   
+}
+.contactinformation .box{
+    position: relative;
+    padding:20px 0;
+    display:flex;
+    color:black;
+}
+.contactinformation .box .icon{
+    min-width: 60px;
+    height:60px;
+    background-color: white;
+    display:flex;
+    margin-left:50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.contactinformation .box  .text{
+    display:flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color:black;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contactinformation .box .text a{
+    color:#010d29;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.contactinformation .box .text p{
+    color:#010d29;
+    margin-top: 10px;
+    font-weight: 500;
+    text-decoration: none;
+}
+/** CONTACT US FORM STYLES **/
+    .conright{
+      width:50%;
+     margin-left: 50px;
+     margin-top: 50px;
+     margin-right: 40px;
+      background-color: white;
+      height:700px;
+      float:right;
+    }
+    form h3{
+      font-size: 25px;
+      margin-top:30px;
+    }
+    .conright .inputc {
+      width: 80%;
+      padding: 12px 20px;
+     margin-left:40px;
+     margin-top: 20px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+    .conright textarea{
+      width: 80%;
+      padding: 12px 20px;
+     margin-left:40px;
+     margin-top: 20px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+    .conright label, .lbltext{
+     font-size: 18px;
+      color:black;
+      margin-left:50px;
+    }
+    .conright button {
+      background-color: #24262b;
+      color: white;
+      border-radius: 5px;
+      padding: 14px 20px;
+      margin-left: 40px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      border: none;
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 80%;
+    }
+
+/** MAKING THE PAGES RESPONSIVE **/
+@media screen and (max-width: 768px) {
+  /** RESPONSIVE NAVIGATION BAR**/
+nav .logo {
+  float: none;
+  width: auto;
+  justify-content: center;
+}
+  /** the links to appear at the center with a transparent background**/
+nav .links {
+  float: none;
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  right: 0;
+  top: 100px;
+  bottom: 100%;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgba(0,0,0,.8);
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all .5s ease-in-out;
+}
+nav .links a {
+  font-size: 20px;
+}
+nav :checked ~ .links {
+  bottom: 0;
+}
+nav .icon-burger {
+  display: block;
+}
+/** on check make the bars form a times like symbol**/
+/**on check the bars, rotate the first child to 225degrees, face to the right**/
+nav :checked ~ .icon-burger .line:nth-child(1) {
+  transform: translateY(10px) rotate(225deg);
+}
+/**on check the bars rotate the bars to -225deg, last bar, face to the left*/
+nav :checked ~ .icon-burger .line:nth-child(3) {
+  transform: translateY(-10px) rotate(-225deg);
+}
+/** on check, the second bar should not be visible**/
+nav :checked ~ .icon-burger .line:nth-child(2) {
+  opacity: 0;
+}
+/** services responsive**/
+.services .heading {
+  font-size: 40px;
+  margin-top: -80px;
+  text-align:center;
+  color: #010d29;
+}
+.services .heading span {
+  color: #a52a2a;
+  font-size: 20px;
+}
+  /** responsive our partner page**/
+  .heading {
+      font-size: 40px;
+      color: white;
+      margin-top:370px;
+      color:#24262b;
+      text-align: center;
+    }
+  
+    .heading span {
+      font-size: 15px;
+    }
+  
+    .profiles {
+      margin-top:30px;
+    }
+  
+    .profile p {
+      margin: 20px 10px 80px 10px;
+    }
+
+/*responsive footer*/
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+/** RESPONSVE LOGIN PAGE**/
+.login_page{
+    width:80%;
+    margin-top:120px;
+    margin:auto;
+}
+.loginform{
+  width:90%;
+  margin: 120px auto;
+}
+.signupform{
+    width:90%;
+    margin:120px auto;
+}
+/** RESPONSIVE CONTACT US **/
+.conimage{
+  width:100%;
+  display:block;
+  margin:auto;
+  height:200px;
+  position: relative;
+}
+.conimage h3{
+  text-align: center;
+  top:40%;
+  left:30%;
+  position:absolute;
+}
+
+
+/**ABOUT US RESPONSIVE PAGE**/
+.aboutcontainer{
+  width:80%;
+  display: block;
+  margin: auto;
+  padding: 50px;
+}
+.aboutcontent{
+  float:none;
+  width:100%;
+  
+  display:block;
+
+}
+.aboutimage{
+  float:none;
+  width:100%;
+  display:block;
+  clear:both;
+  margin:50px auto;
+}
+.abouhead{
+  text-align: center;
+  font-size: 15px;
+  margin-top: -20px;
+}
+}
+
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+
+  
+
+  
